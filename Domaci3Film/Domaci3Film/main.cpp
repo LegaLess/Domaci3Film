@@ -18,7 +18,7 @@ int main() {
 
 	try
 	{
-		cout << lista[2] << endl;
+		cout << lista[-2] << endl;
 	}
 	catch (const VanOpsega ex)
 	{

@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-//#include "Lista.h"
 #include "Film.h"
 
 using namespace std;

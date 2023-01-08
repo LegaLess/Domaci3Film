@@ -135,6 +135,7 @@
     <ClInclude Include="Film.h" />
     <ClInclude Include="Lista.h" />
     <ClInclude Include="StraniFilm.h" />
+    <ClInclude Include="VanOpsega.h" />
     <ClInclude Include="Vreme.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

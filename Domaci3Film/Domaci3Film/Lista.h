@@ -2,16 +2,9 @@
 #define _LISTA_H_
 
 #include <iostream>
+#include "VanOpsega.h"
 
 using namespace std;
-
-class VanOpsega {
-public:
-
-	friend ostream& operator<<(ostream& it, const VanOpsega& v) {
-		return it << "Indeks je izvan opsega!" << endl;
-	}
-};
 
 template <typename T> class Lista {
 
