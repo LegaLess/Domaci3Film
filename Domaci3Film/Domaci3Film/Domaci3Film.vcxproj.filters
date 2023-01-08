@@ -18,6 +18,9 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Film.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Lista.h">
@@ -27,6 +30,12 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="Film.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StraniFilm.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DomaciFilm.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

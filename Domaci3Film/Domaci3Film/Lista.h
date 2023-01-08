@@ -18,7 +18,7 @@ template <typename T> class Lista {
 public:
 
 	void dodaj(T);
-	int broj_podataka();
+	int broj_podataka() const;
 
 	Lista() = default;
 	Lista(const Lista& l) { kopiraj(l); }
@@ -29,7 +29,7 @@ public:
 	T& operator[](int);
 
 	Lista& operator+=(T);
-	Lista& operator=(T);
+	Lista& operator=(Lista<T>&);
 
 private:
 
@@ -66,7 +66,7 @@ inline void Lista<T>::dodaj(T obj){
 }
 
 template<typename T>
-inline int Lista<T>::broj_podataka()
+inline int Lista<T>::broj_podataka() const
 {
 	int counter = 0;
 	Elem* tek = prvi;
@@ -120,9 +120,9 @@ inline Lista<T>& Lista<T>::operator+=(T obj)
 }
 
 template<typename T>
-inline Lista<T>& Lista<T>::operator=(T obj)
+inline Lista<T>& Lista<T>::operator=(Lista<T>& obj)
 {
-	if (this != obj) {
+	if (this != &obj) {
 		brisi();
 		kopiraj(obj);
 	}
@@ -131,7 +131,7 @@ inline Lista<T>& Lista<T>::operator=(T obj)
 }
 
 template<typename T>
-inline void Lista<T>::kopiraj(const Lista& l)
+inline void Lista<T>::kopiraj(const Lista<T>& l)
 {
 	Elem* tek = l.prvi;
 
@@ -142,7 +142,7 @@ inline void Lista<T>::kopiraj(const Lista& l)
 }
 
 template<typename T>
-inline void Lista<T>::premesti(Lista& l)
+inline void Lista<T>::premesti(Lista<T>& l)
 {
 	prvi = l.prvi;
 	posl = l.posl;
